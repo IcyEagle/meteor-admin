@@ -26,7 +26,7 @@
 
 
 Router.route "adminDashboard",
-	path: "/admin"
+	path: "/"
 	template: "AdminDashboard"
 	controller: "AdminController"
 	action: ->
@@ -37,7 +37,7 @@ Router.route "adminDashboard",
 		Session.set 'admin_collection_page', ''
 
 Router.route "adminDashboardUsersView",
-	path: "/admin/Users"
+	path: "/Users"
 	template: "AdminDashboardView"
 	controller: "AdminController"
 	action: ->
@@ -50,7 +50,7 @@ Router.route "adminDashboardUsersView",
 		Session.set 'admin_collection_name', 'Users'
 
 Router.route "adminDashboardUsersNew",
-	path: "/admin/Users/new"
+	path: "/Users/new"
 	template: "AdminDashboardUsersNew"
 	controller: 'AdminController'
 	action: ->
@@ -62,7 +62,7 @@ Router.route "adminDashboardUsersNew",
 		Session.set 'admin_collection_name', 'Users'
 
 Router.route "adminDashboardUsersEdit",
-	path: "/admin/Users/:_id/edit"
+	path: "/Users/:_id/edit"
 	template: "AdminDashboardUsersEdit"
 	controller: "AdminController"
 	data: ->

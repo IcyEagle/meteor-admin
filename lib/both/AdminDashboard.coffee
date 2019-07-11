@@ -43,14 +43,14 @@ AdminDashboard =
 		@collectionItems.push fn
 
 	path: (s) ->
-		path = '/admin'
+		path = '/'
 		if typeof s == 'string' and s.length > 0
 			path += (if s[0] == '/' then '' else '/') + s
 		path
 
 
 AdminDashboard.schemas.newUser = new SimpleSchema
-	email: 
+	email:
 		type: String
 		label: "Email address"
 	chooseOwnPassword:

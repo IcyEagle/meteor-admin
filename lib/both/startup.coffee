@@ -80,7 +80,7 @@ adminCreateRouteView = (collection, collectionName) ->
 
 adminCreateRouteViewOptions = (collection, collectionName) ->
 	options =
-		path: "/admin/#{collectionName}"
+		path: "/#{collectionName}"
 		template: "AdminDashboardViewWrapper"
 		controller: "AdminController"
 		data: ->
@@ -100,7 +100,7 @@ adminCreateRouteNew = (collection, collectionName) ->
 
 adminCreateRouteNewOptions = (collection, collectionName) ->
 	options =
-		path: "/admin/#{collectionName}/new"
+		path: "/#{collectionName}/new"
 		template: "AdminDashboardNew"
 		controller: "AdminController"
 		action: ->
@@ -121,7 +121,7 @@ adminCreateRouteEdit = (collection, collectionName) ->
 
 adminCreateRouteEditOptions = (collection, collectionName) ->
 	options =
-		path: "/admin/#{collectionName}/:_id/edit"
+		path: "/#{collectionName}/:_id/edit"
 		template: "AdminDashboardEdit"
 		controller: "AdminController"
 		waitOn: ->

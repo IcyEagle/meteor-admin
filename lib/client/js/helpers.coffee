@@ -44,7 +44,7 @@ UI.registerHelper 'admin_sidebar_items', ->
 UI.registerHelper 'admin_collection_items', ->
 	items = []
 	_.each AdminDashboard.collectionItems, (fn) =>
-		item = fn @name, '/admin/' + @name
+		item = fn @name, '/' + @name
 		if item?.title and item?.url
 			items.push item
 	items

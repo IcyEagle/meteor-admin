@@ -8,13 +8,13 @@ A complete admin dashboard solution for meteor built off the [iron-router](https
 
 **Feedback Welcome.** Please create an issue.
 
-![alt tag](https://raw.githubusercontent.com/yogiben/meteor-admin/master/readme/screenshot1.png)
+![alt tag](https://raw.githubusercontent.com/yogiben/meteor-master/readme/screenshot1.png)
 
-![alt tag](https://raw.githubusercontent.com/yogiben/meteor-admin/master/readme/screenshot2.png)
+![alt tag](https://raw.githubusercontent.com/yogiben/meteor-master/readme/screenshot2.png)
 
 Maintained by [Meteor Factory](http://meteorfactory.io). Professional Meteor development.
 
-[![Meteor admin](https://raw.githubusercontent.com/yogiben/meteor-admin/master/readme/meteor-factory.jpg)](http://meteorfactory.io)
+[![Meteor admin](https://raw.githubusercontent.com/yogiben/meteor-master/readme/meteor-factory.jpg)](http://meteorfactory.io)
 
 ### Getting started ###
 
@@ -261,7 +261,7 @@ AdminConfig = {
   }
 };
 ```
-The `/admin/Posts/new` and `/admin/Posts/edit` will now use the `postWYSIGEditor` template that you've defined somewhere in your code. The `edit` view will be rendered with a data context (here the document being edited).
+The `/Posts/new` and `/Posts/edit` will now use the `postWYSIGEditor` template that you've defined somewhere in your code. The `edit` view will be rendered with a data context (here the document being edited).
 
 Custom templates are most used when you need to use an {{#autoForm}} instead of the default {{> quickForm}}.
 

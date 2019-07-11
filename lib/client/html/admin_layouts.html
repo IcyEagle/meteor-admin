@@ -1,10 +1,10 @@
 <template name="AdminLayout">
   {{#if AdminConfig}}
   {{#if isInRole 'admin'}}
-  <div class="admin-layout">
+  <div class="admin-layout sidebar-collapse">
     {{# AdminLTE skin=admin_skin }}
       {{> AdminHeader }}
-      {{> AdminSidebar }}
+<!--      {{> AdminSidebar }}-->
       <div class="content-wrapper" style="min-height: {{minHeight}}">
         <section class="content-header">
           <h1>
@@ -12,9 +12,9 @@
             <small>{{$.Session.get 'admin_subtitle'}}</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="/admin/">Dashboard</a></li>
+            <li><a href="/">Dashboard</a></li>
             {{#if $.Session.get 'admin_collection_name'}}
-              <li><a href="/admin/{{$.Session.get 'admin_collection_name'}}/">
+              <li><a href="/{{$.Session.get 'admin_collection_name'}}/">
                 {{adminCollectionLabel admin_collection_name}}
               </a></li>
             {{/if}}
