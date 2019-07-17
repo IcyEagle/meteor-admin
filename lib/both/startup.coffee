@@ -48,6 +48,8 @@ adminCreateTables = (collections) ->
 
 			data: column.name
 			title: column.label
+			render: column.render
+			width: column.width
 			createdCell: createdCell
 
 		if columns.length == 0
@@ -66,6 +68,14 @@ adminCreateTables = (collections) ->
 			columns: columns
 			extraFields: collection.extraFields
 			dom: adminTablesDom
+			changeSelector: (selector) ->
+				# TODO rewrite this shit
+				completedField = _.find(selector['$or'], (data) -> data.isCompleted)
+				if completedField
+					selector.isCompleted = completedField.isCompleted.$regex == 'true'
+					selector['$or'] = _.reject selector['$or'], (data) -> data.isCompleted
+					delete selector['$or'] if selector['$or'].length == 0
+				selector
 			selector: collection.selector || ->
 				return {}
 
